@@ -15,6 +15,23 @@ This project uses krakenex to retrieve candlestick data and to buy/sell cryptocu
 - krakenex
 - telegram_send
 
+## Environment Variables
+The following credentials must be set as environment variables on your operating system:
+
+### MongoDB Configuration
+```
+MONGO_USER=your_username
+MONGO_PASSWORD=your_password
+MONGO_HOST=your_host
+MONGO_PORT=your_port
+```
+
+### Kraken API Configuration
+```
+KRAKEN_API_KEY=your_api_key
+KRAKEN_API_SECRET=your_api_secret
+```
+
 ## Project Structure
 
 ### database/update_indicators.py
@@ -37,9 +54,8 @@ Custom indicator module for technical analysis calculations.
 ```bash
 pip install pandas numpy pymongo krakenex telegram_send
 ```
-3. Configure your Kraken API keys
-4. Set up your MongoDB instance
-5. Configure telegram_send with your bot credentials
+3. Set up your environment variables for MongoDB and Kraken credentials
+4. Configure telegram_send with your bot credentials
 
 ## Running the Application
 Run both scripts concurrently:
@@ -59,7 +75,10 @@ The system will then:
 - Send Telegram notifications for all transactions
 
 ## Security Note
-Ensure your API keys and sensitive credentials are properly secured and never committed to the repository.
+- Never commit your API keys, credentials, or environment variables to the repository
+- Use secure values for your credentials and API keys
+- Regularly rotate your API keys for better security
+- Store environment variables in a secure manner according to your OS guidelines
 
 ## License
 MIT License
