@@ -3,24 +3,6 @@ import certifi
 import os
 from datetime import datetime
 
-assets = [
-	'BTCUSD',
-	'ETHUSD',
-	'LTCUSD',
-	'ADAUSD',
-	'DOGEUSD',
-	'LINKUSD',
-	'XLMUSD',
-	'ATOMUSD',
-	'ALGOUSD',
-	'BNBUSD',
-	'MATICUSD',
-	'AAVEUSD',
-	'DOTUSD',
-	'UNIUSD',
-	'AVAXUSD'
-]
-
 class MongoConnection:
 
 	def __init__(self):
